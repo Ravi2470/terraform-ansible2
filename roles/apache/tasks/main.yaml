@@ -1,0 +1,10 @@
+
+---
+- name: Ensure Apache2 is at the latest version
+  apt:
+    name: apache2
+    state: latest
+- name: Make sure Apache2 is running
+  systemd:
+    state: started
+    name: apache2
